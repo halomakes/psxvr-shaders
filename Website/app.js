@@ -40,6 +40,7 @@ const setTheme = () => {
 
 (() => {
   setTheme();
+  document.getElementById('vccUrlField').href = LISTING_URL;
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     setTheme();
