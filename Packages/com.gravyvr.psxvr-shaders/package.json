@@ -1,0 +1,19 @@
+{
+    "name": "com.gravyvr.psxvr-shaders",
+    "version": "0.0.1",
+    "displayName": "PSXVR Shaders",
+    "description": "PlayStation-style shaders for use in VRChat",
+    "unity": "2019.1",
+    "documentationUrl": "https://github.com/halomakes/psxvr-shaders",
+    "changelogUrl": "https://github.com/halomakes/psxvr-shaders/releases",
+    "licensesUrl": "https://github.com/halomakes/psxvr-shaders?tab=License-1-ov-file",
+    "keywords": [
+        "shader",
+        "vrchat"
+    ],
+    "author": {
+        "name": "Alex Griffith",
+        "email": "alex@alexgriffith.me",
+        "url": "https://alexgriffith.me"
+    }
+}
