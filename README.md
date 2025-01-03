@@ -17,7 +17,7 @@ Retro shaders for use in VRChat.  Built on the shader work by [dsoft20/psx_retro
   
   ![Example of Shading Mix](demo/mix.gif?raw=true)
 
-*There is an included [VRCFury](https://github.com/VRCFury/VRCFury) prefab to add controls for these values to your expressions wheel.  Change the animator rewrite path in the main component if your avatar mesh is named something other than "Body".  
+*There is an included [VRCFury](https://github.com/VRCFury/VRCFury) prefab to add controls for these values to your expressions wheel.  Change the animator rewrite path in the main component if your avatar mesh is named something other than "Body".*
 
 ## Variants
 ### psxvr/toon
