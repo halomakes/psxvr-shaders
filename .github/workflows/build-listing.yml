@@ -44,7 +44,6 @@ jobs:
         uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac
         with:
           repository: Happyrobot33/package-list-action
-          ref: Parameters
           path: ${{ env.pathToCi }}
           clean: false
 
@@ -59,7 +58,7 @@ jobs:
       
       # Build Package Version Listing with Nuke
       - name: Build Package Version Listing
-        run: ${{ env.pathToCi }}/build.cmd BuildRepoListing --root ${{ env.pathToCi }} --list-publish-directory $GITHUB_WORKSPACE/${{ env.listPublishDirectory }} --current-package-name ${{ vars.PACKAGE_NAME }}
+        run: ${{ env.pathToCi }}/build.cmd BuildRepoListing --root ${{ env.pathToCi }} --list-publish-directory $GITHUB_WORKSPACE/${{ env.listPublishDirectory }} --current-package-name ${{ vars.PACKAGE_NAME }} --current-listing-url https://psx.gravyvr.social/index.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
