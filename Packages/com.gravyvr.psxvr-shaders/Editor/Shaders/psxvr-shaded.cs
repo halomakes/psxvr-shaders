@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class PsxvrToonUi : PsxvrUi
+public class PsxvrShadedUi : PsxvrUi
 {
-    protected override string ShaderName => "PSXVR Toon";
+    protected override string ShaderName => "PSXVR Shaded";
 }
 #endif
