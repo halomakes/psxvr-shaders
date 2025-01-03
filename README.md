@@ -1,38 +1,20 @@
-# psx_retroshader
-Shaders collection for Unity that "emulates" the rendering style of ps1
+# psxvr-shaders
+Retro shaders for use in VRChat.  Built on the shader work by [dsoft20/psx_retroshader](https://github.com/dsoft20/psx_retroshader).
 
-WebPlayer (it's an old build): https://dl.dropboxusercontent.com/u/1050404/psx/psx.html
+## Common Properties
+* **Vertex Crunchiness**: Controls how strong the low-precision vertex snapping effect is.
+* **EV Offset**: Compensates material final brightness.
+* **Shade Mix**: Mixes between scene lighting and unlit values.  Use this to tone back lighting if it's too strong for your liking.
 
-You can see it in action here: https://www.youtube.com/watch?v=MxcLA--2v-Y
+*There is an included [VRCFury](https://github.com/VRCFury/VRCFury) prefab to add controls for these values to your expressions wheel.  Change the animator rewrite path in the main component if your avatar mesh is named something other than "Body".  
 
-![ScreenShot](http://i.imgur.com/MS7sjt3.png)
-![ScreenShot](http://i.imgur.com/my438QX.gif)
+## Variants
+### psxvr/toon
+Mostly flat-shaded but inherits lighting from the environment at the anchor point.  Useful for characters and models with higher polygon counts.
 
-#Content & usage
-psx_retroshader includes 4 shaders, plus a simple posterize image effect (cPrecision.cs):
-- unlit
-- vertex lit
-- trasparent unlit
-- trasparent vertex lit
-- Reflective shaders (Add & Mult variants)
+### psxvr/shaded
+Vertex-shaded variant, useful for super-low-poly objects and environments. 
 
-Vertex lit shaders now supports spotlights too!
-
-Example of the posterize shader:
-![ScreenShot](http://i.imgur.com/HE5fxhT.png)
-
-All shaders supports Fog, polygon cut-out & distortion amount.
-- Fog color & distance is driven by Unity fog settings (remember to set as linear fog).
-- Polygon cutout is driven by tha alpha channel of Fog Color, it works by cutting every polygon that are greater in distance than fogstart+fogcolor.alpha (fog color is in range 0-1 but is multiplied in the shader by 255)
-- Distortion amount is driven by the alpha channel of unity's ambient color, you can adjust it as you please.
-
-#Warning
-Like the original ps1 this shader use affine texture mapping, so if you apply a texture on a large quad you'll see it very distored.
-To avoid excessive distortion you have to add triangless to the mesh.
-
-Example:
-
-![ScreenShot](http://i.imgur.com/zC2T1uJ.png)
-
-As you can see the effect is better when the mesh is subdivided (bottom left mesh) instead of when the mesh have a low poly count (top right mesh) 
-
+## Potential Features to Investigate
+* AudioLink support
+* Landscape variant with auto subdivision for nearby geometry
