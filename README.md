@@ -1,5 +1,8 @@
-# psxvr-shaders
+# psxvr-shaders ![VPM Package Version](https://img.shields.io/vpm/v/com.gravyvr.psxvr-shaders?repository_url=https%3A%2F%2Fpsx.gravyvr.social%2Findex.json)
 Retro shaders for use in VRChat.  Built on the shader work by [dsoft20/psx_retroshader](https://github.com/dsoft20/psx_retroshader).
+
+### ⬇️ [Download Latest Version](https://github.com/halomakes/psxvr-shaders/releases/latest)
+### 📦 [Add to VRChat Creator Companion](https://psx.gravyvr.social)
 
 ## Common Properties
 * **Vertex Crunchiness**: Controls how strong the low-precision vertex snapping effect is.
