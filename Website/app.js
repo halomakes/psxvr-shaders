@@ -1,6 +1,6 @@
 import { baseLayerLuminance, StandardLuminance } from 'https://unpkg.com/@fluentui/web-components';
 
-const LISTING_URL = "{{ listingInfo.Url }}";
+const LISTING_URL = "https://psx.gravyvr.social/index.json";
 
 const PACKAGES = {
 {{~ for package in packages ~}}
