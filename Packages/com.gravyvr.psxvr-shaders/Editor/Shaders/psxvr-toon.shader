@@ -47,7 +47,7 @@
 				// lighting
 				float4 unlit = float4(1.0, 1.0, 1.0, 1.0);
 				o.color = float4(shadeAmbient(v.vertex, _Lights), 1.0);
-				o.color = (o.color * _ShadeMix) + (unlit * (1 - _ShadeMix)) + _EvCompensation;
+				o.color = clamp((o.color * _ShadeMix) + (unlit * (1 - _ShadeMix)) + _EvCompensation, 0.0, 1.0);
 
 				//Affine Texture Mapping
 				float distance = length(mul(UNITY_MATRIX_MV,v.vertex));
@@ -64,10 +64,7 @@
 
 			float4 frag(v2f IN) : COLOR
 			{
-				half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r)*IN.color;
-				half4 color = c*(IN.colorFog.a);
-				color.rgb += IN.colorFog.rgb*(1 - IN.colorFog.a);
-				return color;
+				return tex2D(_MainTex, IN.uv_MainTex / IN.normal.r)*IN.color;
 			}
 			
 			ENDCG
